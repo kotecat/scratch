@@ -1,5 +1,10 @@
 # scratch
 API
 
- INSTALL SCRATCHCLIENT:
+ INSTALL:
+ 
 `pip install scratchclient`
+
+`pip install request`
+
+`pip install BeautifulSoup4`
