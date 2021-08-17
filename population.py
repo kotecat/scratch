@@ -7,8 +7,9 @@ pop = 'https://countrymeters.info/ru/World'
 btc = 'https://www.marketwatch.com/investing/cryptocurrency/btcusd'
 headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36'}
 
-session = ScratchSession("davidik062", "baks2018")
-connection = session.create_cloud_connection(560776491)
+#!-You DATA-!
+session = ScratchSession("youLOGIN", "youPASS")
+connection = session.create_cloud_connection(560776491)  #<---project-id
 
 #----> PARSER!!!
 def parserp(type):
@@ -32,9 +33,6 @@ def parserbtc():
 i = 2
 
 while i >= 1:
-	session = ScratchSession("davidik062", "baks2018")
-	connection = session.create_cloud_connection(560776491)
-
 	btccc = parserbtc().replace(',', '')
 	p = parserp(1).replace(' ', '')
 	m = parserp(0).replace(' ', '')
@@ -43,4 +41,4 @@ while i >= 1:
 	connection.set_cloud_variable("p", p)
 	connection.set_cloud_variable("m", m)
 
-	time.sleep(1)
+	time.sleep(1) #<--ЗАДЕРЖКА
